@@ -1,20 +1,36 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
+import { WordlistService } from './wordlist.service';
+import { ObserveOnMessage } from 'rxjs/internal/operators/observeOn';
+import { tap, map } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
 })
 export class WordService {
 
-  constructor() { }
+  private wordList: any[];
+
+  constructor(private wordListService: WordlistService) {
+    this.wordList = [];
+  }
 
   getWord(language: string, key: string): Observable<string> {
-    console.log('returning: ' + key);
-    switch (language) {
-      case 'EN':
-      return of('Passwoprd');
-      default:
-    return of('wachtwoord');
+
+    return this.getList(language)
+    .pipe(
+      map(wordList => wordList[key])
+    );
+  }
+
+  getList(language: string): Observable<Map<string, string>> {
+    if (this.wordList[language] !== undefined) {
+      return of(this.wordList[language]);
     }
+
+    return this.wordListService.GetList(language)
+    .pipe(
+      tap(wordList => this.wordList[language] = wordList)
+    );
   }
 }
