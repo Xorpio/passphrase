@@ -4,4 +4,8 @@ export class Passwordspec {
   UseSpecialCharacters: boolean;
   UseSpace: boolean;
   UseNumbers: boolean;
+
+  constructor() {
+    this.Words = 5;
+  }
 }

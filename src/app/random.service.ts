@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { Observable, of } from 'rxjs';
-import { List } from 'immutable';
+import { Observable, range } from 'rxjs';
+import { map, toArray, mergeMap } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -10,6 +10,18 @@ export class RandomService {
   constructor() { }
 
   public GenerateList(numberOfLists: number): Observable<string> {
-    return of('abc', '123456');
+    return range(1, numberOfLists)
+    .pipe(mergeMap(num => this.generateKey()));
+  }
+
+  private generateKey(): Observable<string> {
+    return range(1, 5)
+      .pipe(
+        map(x => ( Math.ceil(Math.random() * 100 % 6)) // dice roll
+        ),
+        map(generatedNumber => generatedNumber.toString()),
+        toArray(),
+        map(numberArray => numberArray.join(''))
+      );
   }
 }
