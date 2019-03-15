@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
 import { RandomService } from './random.service';
-import { of, Observable } from 'rxjs';
-import { reduce, mergeMap, toArray, map } from 'rxjs/operators';
-import { Passwordspec } from './passwordform/passwordspec';
+import { Observable } from 'rxjs';
+import { mergeMap, toArray, map } from 'rxjs/operators';
 import { WordService } from './word.service';
+import { Passwordspec } from '../models/passwordspec';
 
 @Injectable({
   providedIn: 'root'
@@ -20,7 +20,5 @@ export class PasswordService {
       map(words => words.join(passwordspec.UseSpace ? ' ' : ''))
     )
     ;
-
-    // return of('Mijn wachtwoord');
   }
 }

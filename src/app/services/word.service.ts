@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { WordlistService } from './wordlist.service';
-import { ObserveOnMessage } from 'rxjs/internal/operators/observeOn';
 import { tap, map } from 'rxjs/operators';
 
 @Injectable({
@@ -16,7 +15,6 @@ export class WordService {
   }
 
   getWord(language: string, key: string): Observable<string> {
-
     return this.getList(language)
     .pipe(
       map(wordList => wordList[key])
