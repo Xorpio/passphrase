@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { PasswordService } from '../password.service';
-import { Passwordspec } from './passwordspec';
+import { PasswordService } from '../services/password.service';
+import { Passwordspec } from '../models/passwordspec';
 import { faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
