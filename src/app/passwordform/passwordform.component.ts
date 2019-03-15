@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { PasswordService } from '../services/password.service';
 import { Passwordspec } from '../models/passwordspec';
-import { faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons';
+import { faAngleLeft, faAngleRight, faSyncAlt } from '@fortawesome/free-solid-svg-icons';
+import { Subject } from 'rxjs';
 
 @Component({
   selector: 'app-passwordform',
@@ -10,11 +11,14 @@ import { faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons';
 })
 export class PasswordformComponent implements OnInit {
 
+  sentence: string;
+
   password: string;
   passwordSpec = new Passwordspec();
 
   faAngleLeft = faAngleLeft;
   faAngleRight = faAngleRight;
+  faSyncAlt = faSyncAlt;
 
   constructor(private passwordService: PasswordService) {
   }
@@ -24,7 +28,10 @@ export class PasswordformComponent implements OnInit {
 
   generatePassword() {
     this.passwordService.generatePassword(this.passwordSpec)
-    .subscribe(password => this.password = password);
+    .subscribe(passwordTuple => {
+      this.password = passwordTuple[0];
+      this.sentence = passwordTuple[1];
+    });
   }
 
   wordsDown() {
