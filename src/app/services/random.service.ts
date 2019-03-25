@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Observable, range } from 'rxjs';
+import { Observable, range, of } from 'rxjs';
 import { map, toArray, mergeMap } from 'rxjs/operators';
 
 @Injectable({
@@ -23,5 +23,10 @@ export class RandomService {
         toArray(),
         map(numberArray => numberArray.join(''))
       );
+  }
+
+  generateRandomNumber(numOfNumbers: number): Observable<number>{
+    return range(1, numOfNumbers)
+    .pipe(map(_ => Math.ceil(Math.random() * 1000)));
   }
 }
