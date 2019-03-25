@@ -49,7 +49,7 @@ export class PasswordformComponent implements OnInit {
   }
 
   private getSentence(): Observable<List<string>>{
-    if (this.wordList === undefined || this.wordList.isEmpty()) {
+    if (this.wordList.isEmpty()) {
       this.generateSentence();
     }
 

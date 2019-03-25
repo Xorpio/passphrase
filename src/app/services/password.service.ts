@@ -4,7 +4,6 @@ import { Observable, of } from 'rxjs';
 import { PasswordSpec } from '../models/passwordSpec';
 import { List } from 'immutable';
 import { toArray, map, mergeMap, tap } from 'rxjs/operators';
-import { SlicePipe } from '@angular/common';
 
 @Injectable({
   providedIn: 'root'

@@ -1,4 +1,3 @@
-
 export class SentenceSpec {
   Language: string;
   Words: number;
