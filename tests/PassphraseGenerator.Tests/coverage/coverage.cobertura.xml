@@ -1,0 +1,1006 @@
+<?xml version="1.0" encoding="utf-8"?>
+<coverage line-rate="0.8388" branch-rate="0.8284999999999999" version="1.9" timestamp="1780484725" lines-covered="203" lines-valid="242" branches-covered="58" branches-valid="70">
+  <sources>
+    <source>D:/squad/new-site/src/PassphraseGenerator/</source>
+  </sources>
+  <packages>
+    <package name="PassphraseGenerator" line-rate="0.8388" branch-rate="0.8284999999999999" complexity="95">
+      <classes>
+        <class name="Program/&lt;&lt;Main&gt;$&gt;d__0" filename="Program.cs" line-rate="0" branch-rate="1" complexity="1">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="6" hits="0" branch="False" />
+                <line number="7" hits="0" branch="False" />
+                <line number="8" hits="0" branch="False" />
+                <line number="10" hits="0" branch="False" />
+                <line number="11" hits="0" branch="False" />
+                <line number="14" hits="0" branch="False" />
+                <line number="15" hits="0" branch="False" />
+                <line number="16" hits="0" branch="False" />
+                <line number="17" hits="0" branch="False" />
+                <line number="19" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="6" hits="0" branch="False" />
+            <line number="7" hits="0" branch="False" />
+            <line number="8" hits="0" branch="False" />
+            <line number="10" hits="0" branch="False" />
+            <line number="11" hits="0" branch="False" />
+            <line number="14" hits="0" branch="False" />
+            <line number="15" hits="0" branch="False" />
+            <line number="16" hits="0" branch="False" />
+            <line number="17" hits="0" branch="False" />
+            <line number="19" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="PassphraseGenerator.Layout.MainLayout" filename="Layout/MainLayout.razor" line-rate="0" branch-rate="1" complexity="1">
+          <methods>
+            <method name="BuildRenderTree" signature="(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder)" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="14" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="14" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="PassphraseGenerator.Services.LocalRandomService" filename="Services/LocalRandomService.cs" line-rate="1" branch-rate="1" complexity="4">
+          <methods>
+            <method name="GetDiceRollAsync" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="8" hits="1508" branch="False" />
+                <line number="9" hits="1508" branch="False" />
+                <line number="10" hits="1508" branch="False" />
+              </lines>
+            </method>
+            <method name="GetDiceRollsAsync" signature="(System.Int32)" line-rate="1" branch-rate="1" complexity="2">
+              <lines>
+                <line number="13" hits="6" branch="False" />
+                <line number="14" hits="6" branch="False" />
+                <line number="15" hits="1260" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="38" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="16" hits="624" branch="False" />
+                <line number="17" hits="624" branch="False" />
+                <line number="18" hits="624" branch="False" />
+                <line number="19" hits="6" branch="False" />
+                <line number="20" hits="6" branch="False" />
+              </lines>
+            </method>
+            <method name="GetIntAsync" signature="(System.Int32,System.Int32)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="23" hits="300" branch="False" />
+                <line number="24" hits="300" branch="False" />
+                <line number="25" hits="300" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="8" hits="1508" branch="False" />
+            <line number="9" hits="1508" branch="False" />
+            <line number="10" hits="1508" branch="False" />
+            <line number="13" hits="6" branch="False" />
+            <line number="14" hits="6" branch="False" />
+            <line number="15" hits="1260" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="38" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="16" hits="624" branch="False" />
+            <line number="17" hits="624" branch="False" />
+            <line number="18" hits="624" branch="False" />
+            <line number="19" hits="6" branch="False" />
+            <line number="20" hits="6" branch="False" />
+            <line number="23" hits="300" branch="False" />
+            <line number="24" hits="300" branch="False" />
+            <line number="25" hits="300" branch="False" />
+          </lines>
+        </class>
+        <class name="PassphraseGenerator.Services.PasswordService" filename="Services/PasswordService.cs" line-rate="1" branch-rate="1" complexity="15">
+          <methods>
+            <method name="GeneratePassword" signature="(PassphraseGenerator.Services.Models.PasswordSpec,System.Collections.Generic.IReadOnlyList`1&lt;System.String&gt;)" line-rate="1" branch-rate="1" complexity="10">
+              <lines>
+                <line number="24" hits="14" branch="False" />
+                <line number="25" hits="14" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="12" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="26" hits="1" branch="False" />
+                <line number="28" hits="36" branch="False" />
+                <line number="30" hits="13" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="78" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="31" hits="12" branch="False" />
+                <line number="33" hits="13" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="129" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="34" hits="6" branch="False" />
+                <line number="36" hits="13" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="161" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="37" hits="4" branch="False" />
+                <line number="39" hits="13" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="189" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="40" hits="36" branch="False" />
+                <line number="41" hits="14" branch="False" />
+              </lines>
+            </method>
+            <method name="ApplyTransform" signature="(System.Collections.Generic.List`1&lt;System.Char[]&gt;,System.Func`2&lt;System.Char,System.Char&gt;)" line-rate="1" branch-rate="1" complexity="2">
+              <lines>
+                <line number="44" hits="11" branch="False" />
+                <line number="45" hits="11" branch="False" />
+                <line number="46" hits="11" branch="False" />
+                <line number="47" hits="11" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="30" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="48" hits="11" branch="False" />
+                <line number="49" hits="11" branch="False" />
+                <line number="50" hits="11" branch="False" />
+              </lines>
+            </method>
+            <method name="GetInt" signature="(System.Int32,System.Int32)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="52" hits="27" branch="False" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="(PassphraseGenerator.Services.IRandomService,Microsoft.Extensions.Logging.ILogger`1&lt;PassphraseGenerator.Services.PasswordService&gt;)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="17" hits="14" branch="False" />
+                <line number="18" hits="14" branch="False" />
+                <line number="19" hits="14" branch="False" />
+                <line number="20" hits="14" branch="False" />
+                <line number="21" hits="14" branch="False" />
+              </lines>
+            </method>
+            <method name=".cctor" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="12" hits="1" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="24" hits="14" branch="False" />
+            <line number="25" hits="14" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="12" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="26" hits="1" branch="False" />
+            <line number="28" hits="36" branch="False" />
+            <line number="30" hits="13" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="78" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="31" hits="12" branch="False" />
+            <line number="33" hits="13" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="129" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="34" hits="6" branch="False" />
+            <line number="36" hits="13" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="161" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="37" hits="4" branch="False" />
+            <line number="39" hits="13" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="189" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="40" hits="36" branch="False" />
+            <line number="41" hits="14" branch="False" />
+            <line number="44" hits="11" branch="False" />
+            <line number="45" hits="11" branch="False" />
+            <line number="46" hits="11" branch="False" />
+            <line number="47" hits="11" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="30" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="48" hits="11" branch="False" />
+            <line number="49" hits="11" branch="False" />
+            <line number="50" hits="11" branch="False" />
+            <line number="52" hits="27" branch="False" />
+            <line number="17" hits="14" branch="False" />
+            <line number="18" hits="14" branch="False" />
+            <line number="19" hits="14" branch="False" />
+            <line number="20" hits="14" branch="False" />
+            <line number="21" hits="14" branch="False" />
+            <line number="12" hits="1" branch="False" />
+          </lines>
+        </class>
+        <class name="PassphraseGenerator.Services.WordlistService" filename="Services/WordlistService.cs" line-rate="1" branch-rate="1" complexity="3">
+          <methods>
+            <method name="get_SupportedLanguages" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="18" hits="4" branch="False" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="(System.Net.Http.HttpClient,Microsoft.Extensions.Logging.ILogger`1&lt;PassphraseGenerator.Services.WordlistService&gt;)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="10" hits="9" branch="False" />
+                <line number="19" hits="9" branch="False" />
+                <line number="20" hits="9" branch="False" />
+                <line number="21" hits="9" branch="False" />
+                <line number="22" hits="9" branch="False" />
+                <line number="23" hits="9" branch="False" />
+                <line number="25" hits="9" branch="False" />
+                <line number="26" hits="9" branch="False" />
+                <line number="27" hits="9" branch="False" />
+                <line number="28" hits="9" branch="False" />
+                <line number="29" hits="9" branch="False" />
+              </lines>
+            </method>
+            <method name=".cctor" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="12" hits="1" branch="False" />
+                <line number="13" hits="1" branch="False" />
+                <line number="14" hits="1" branch="False" />
+                <line number="15" hits="1" branch="False" />
+                <line number="16" hits="1" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="18" hits="4" branch="False" />
+            <line number="10" hits="9" branch="False" />
+            <line number="19" hits="9" branch="False" />
+            <line number="20" hits="9" branch="False" />
+            <line number="21" hits="9" branch="False" />
+            <line number="22" hits="9" branch="False" />
+            <line number="23" hits="9" branch="False" />
+            <line number="25" hits="9" branch="False" />
+            <line number="26" hits="9" branch="False" />
+            <line number="27" hits="9" branch="False" />
+            <line number="28" hits="9" branch="False" />
+            <line number="29" hits="9" branch="False" />
+            <line number="12" hits="1" branch="False" />
+            <line number="13" hits="1" branch="False" />
+            <line number="14" hits="1" branch="False" />
+            <line number="15" hits="1" branch="False" />
+            <line number="16" hits="1" branch="False" />
+          </lines>
+        </class>
+        <class name="PassphraseGenerator.Services.WordlistService/&lt;GetOrLoadWordlistAsync&gt;d__9" filename="Services/WordlistService.cs" line-rate="0.7826000000000001" branch-rate="0.8332999999999999" complexity="6">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="0.7826000000000001" branch-rate="0.8332999999999999" complexity="6">
+              <lines>
+                <line number="46" hits="9" branch="False" />
+                <line number="47" hits="9" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="45" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="48" hits="1" branch="False" />
+                <line number="50" hits="8" branch="True" condition-coverage="50% (1/2)">
+                  <conditions>
+                    <condition number="86" type="jump" coverage="50%" />
+                  </conditions>
+                </line>
+                <line number="51" hits="0" branch="False" />
+                <line number="54" hits="8" branch="False" />
+                <line number="55" hits="8" branch="False" />
+                <line number="56" hits="7" branch="False" />
+                <line number="57" hits="7" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="275" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="58" hits="7" branch="False" />
+                <line number="59" hits="7" branch="False" />
+                <line number="60" hits="7" branch="False" />
+                <line number="61" hits="7" branch="False" />
+                <line number="62" hits="7" branch="False" />
+                <line number="64" hits="1" branch="False" />
+                <line number="65" hits="1" branch="False" />
+                <line number="66" hits="1" branch="False" />
+                <line number="67" hits="1" branch="False" />
+                <line number="69" hits="0" branch="False" />
+                <line number="70" hits="0" branch="False" />
+                <line number="71" hits="0" branch="False" />
+                <line number="72" hits="0" branch="False" />
+                <line number="74" hits="9" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="46" hits="9" branch="False" />
+            <line number="47" hits="9" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="45" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="48" hits="1" branch="False" />
+            <line number="50" hits="8" branch="True" condition-coverage="50% (1/2)">
+              <conditions>
+                <condition number="86" type="jump" coverage="50%" />
+              </conditions>
+            </line>
+            <line number="51" hits="0" branch="False" />
+            <line number="54" hits="8" branch="False" />
+            <line number="55" hits="8" branch="False" />
+            <line number="56" hits="7" branch="False" />
+            <line number="57" hits="7" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="275" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="58" hits="7" branch="False" />
+            <line number="59" hits="7" branch="False" />
+            <line number="60" hits="7" branch="False" />
+            <line number="61" hits="7" branch="False" />
+            <line number="62" hits="7" branch="False" />
+            <line number="64" hits="1" branch="False" />
+            <line number="65" hits="1" branch="False" />
+            <line number="66" hits="1" branch="False" />
+            <line number="67" hits="1" branch="False" />
+            <line number="69" hits="0" branch="False" />
+            <line number="70" hits="0" branch="False" />
+            <line number="71" hits="0" branch="False" />
+            <line number="72" hits="0" branch="False" />
+            <line number="74" hits="9" branch="False" />
+          </lines>
+        </class>
+        <class name="PassphraseGenerator.Services.WordlistService/&lt;GetWordAsync&gt;d__8" filename="Services/WordlistService.cs" line-rate="1" branch-rate="1" complexity="8">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="8">
+              <lines>
+                <line number="32" hits="9" branch="False" />
+                <line number="33" hits="9" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="35" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="34" hits="9" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="74" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="35" hits="1" branch="False" />
+                <line number="36" hits="1" branch="False" />
+                <line number="37" hits="1" branch="False" />
+                <line number="39" hits="9" branch="False" />
+                <line number="40" hits="10" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="260" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="42" hits="8" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="289" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="43" hits="9" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="32" hits="9" branch="False" />
+            <line number="33" hits="9" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="35" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="34" hits="9" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="74" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="35" hits="1" branch="False" />
+            <line number="36" hits="1" branch="False" />
+            <line number="37" hits="1" branch="False" />
+            <line number="39" hits="9" branch="False" />
+            <line number="40" hits="10" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="260" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="42" hits="8" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="289" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="43" hits="9" branch="False" />
+          </lines>
+        </class>
+        <class name="PassphraseGenerator.Services.WordService" filename="Services/WordService.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name=".ctor" signature="(PassphraseGenerator.Services.IRandomService,PassphraseGenerator.Services.IWordlistService,Microsoft.Extensions.Logging.ILogger`1&lt;PassphraseGenerator.Services.WordService&gt;)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="12" hits="9" branch="False" />
+                <line number="13" hits="9" branch="False" />
+                <line number="14" hits="9" branch="False" />
+                <line number="15" hits="9" branch="False" />
+                <line number="16" hits="9" branch="False" />
+                <line number="17" hits="9" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="12" hits="9" branch="False" />
+            <line number="13" hits="9" branch="False" />
+            <line number="14" hits="9" branch="False" />
+            <line number="15" hits="9" branch="False" />
+            <line number="16" hits="9" branch="False" />
+            <line number="17" hits="9" branch="False" />
+          </lines>
+        </class>
+        <class name="PassphraseGenerator.Services.WordService/&lt;GetSentenceAsync&gt;d__4" filename="Services/WordService.cs" line-rate="1" branch-rate="1" complexity="4">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="4">
+              <lines>
+                <line number="20" hits="9" branch="False" />
+                <line number="21" hits="9" branch="False" />
+                <line number="23" hits="76" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="520" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="24" hits="29" branch="False" />
+                <line number="25" hits="29" branch="False" />
+                <line number="26" hits="29" branch="False" />
+                <line number="27" hits="29" branch="False" />
+                <line number="29" hits="29" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="372" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="30" hits="1" branch="False" />
+                <line number="31" hits="1" branch="False" />
+                <line number="32" hits="1" branch="False" />
+                <line number="33" hits="1" branch="False" />
+                <line number="35" hits="29" branch="False" />
+                <line number="36" hits="29" branch="False" />
+                <line number="38" hits="9" branch="False" />
+                <line number="39" hits="9" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="20" hits="9" branch="False" />
+            <line number="21" hits="9" branch="False" />
+            <line number="23" hits="76" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="520" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="24" hits="29" branch="False" />
+            <line number="25" hits="29" branch="False" />
+            <line number="26" hits="29" branch="False" />
+            <line number="27" hits="29" branch="False" />
+            <line number="29" hits="29" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="372" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="30" hits="1" branch="False" />
+            <line number="31" hits="1" branch="False" />
+            <line number="32" hits="1" branch="False" />
+            <line number="33" hits="1" branch="False" />
+            <line number="35" hits="29" branch="False" />
+            <line number="36" hits="29" branch="False" />
+            <line number="38" hits="9" branch="False" />
+            <line number="39" hits="9" branch="False" />
+          </lines>
+        </class>
+        <class name="PassphraseGenerator.Services.Models.PasswordSpec" filename="Services/Models/PasswordSpec.cs" line-rate="1" branch-rate="1" complexity="5">
+          <methods>
+            <method name="get_UseSpace" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="5" hits="13" branch="False" />
+              </lines>
+            </method>
+            <method name="get_UseCapital" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="6" hits="13" branch="False" />
+              </lines>
+            </method>
+            <method name="get_UseNumbers" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="7" hits="13" branch="False" />
+              </lines>
+            </method>
+            <method name="get_UseSpecialCharacters" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="8" hits="30" branch="False" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="(System.Boolean,System.Boolean,System.Boolean,System.Boolean)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="4" hits="17" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="5" hits="13" branch="False" />
+            <line number="6" hits="13" branch="False" />
+            <line number="7" hits="13" branch="False" />
+            <line number="8" hits="30" branch="False" />
+            <line number="4" hits="17" branch="False" />
+          </lines>
+        </class>
+        <class name="PassphraseGenerator.Services.Models.SentenceSpec" filename="Services/Models/SentenceSpec.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name="get_WordCount" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="4" hits="105" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="4" hits="105" branch="False" />
+          </lines>
+        </class>
+        <class name="PassphraseGenerator.Components.PassphraseForm" filename="Components/PassphraseForm.razor.cs" line-rate="1" branch-rate="0.6666" complexity="12">
+          <methods>
+            <method name="get_WordService" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="10" hits="57" branch="False" />
+              </lines>
+            </method>
+            <method name="get_PasswordService" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="11" hits="41" branch="False" />
+              </lines>
+            </method>
+            <method name="get_WordlistService" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="12" hits="57" branch="False" />
+              </lines>
+            </method>
+            <method name="get_JS" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="13" hits="39" branch="False" />
+              </lines>
+            </method>
+            <method name="IncrementWordCount" signature="()" line-rate="1" branch-rate="0.5" complexity="2">
+              <lines>
+                <line number="58" hits="5" branch="False" />
+                <line number="59" hits="10" branch="True" condition-coverage="50% (1/2)">
+                  <conditions>
+                    <condition number="13" type="jump" coverage="50%" />
+                  </conditions>
+                </line>
+                <line number="60" hits="5" branch="False" />
+              </lines>
+            </method>
+            <method name="DecrementWordCount" signature="()" line-rate="1" branch-rate="0.5" complexity="2">
+              <lines>
+                <line number="63" hits="2" branch="False" />
+                <line number="64" hits="4" branch="True" condition-coverage="50% (1/2)">
+                  <conditions>
+                    <condition number="12" type="jump" coverage="50%" />
+                  </conditions>
+                </line>
+                <line number="65" hits="2" branch="False" />
+              </lines>
+            </method>
+            <method name="GeneratePassword" signature="()" line-rate="1" branch-rate="1" complexity="2">
+              <lines>
+                <line number="95" hits="3" branch="False" />
+                <line number="96" hits="3" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="17" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="97" hits="3" branch="False" />
+                <line number="98" hits="3" branch="False" />
+              </lines>
+            </method>
+            <method name="GeneratePasswordInternal" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="101" hits="3" branch="False" />
+                <line number="102" hits="3" branch="False" />
+                <line number="103" hits="3" branch="False" />
+                <line number="104" hits="3" branch="False" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="20" hits="19" branch="False" />
+                <line number="21" hits="19" branch="False" />
+                <line number="22" hits="19" branch="False" />
+                <line number="24" hits="19" branch="False" />
+                <line number="25" hits="19" branch="False" />
+                <line number="26" hits="19" branch="False" />
+                <line number="27" hits="19" branch="False" />
+                <line number="29" hits="19" branch="False" />
+                <line number="30" hits="19" branch="False" />
+                <line number="31" hits="19" branch="False" />
+                <line number="33" hits="19" branch="False" />
+                <line number="34" hits="19" branch="False" />
+                <line number="35" hits="19" branch="False" />
+                <line number="38" hits="19" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="10" hits="57" branch="False" />
+            <line number="11" hits="41" branch="False" />
+            <line number="12" hits="57" branch="False" />
+            <line number="13" hits="39" branch="False" />
+            <line number="58" hits="5" branch="False" />
+            <line number="59" hits="10" branch="True" condition-coverage="50% (1/2)">
+              <conditions>
+                <condition number="13" type="jump" coverage="50%" />
+              </conditions>
+            </line>
+            <line number="60" hits="5" branch="False" />
+            <line number="63" hits="2" branch="False" />
+            <line number="64" hits="4" branch="True" condition-coverage="50% (1/2)">
+              <conditions>
+                <condition number="12" type="jump" coverage="50%" />
+              </conditions>
+            </line>
+            <line number="65" hits="2" branch="False" />
+            <line number="95" hits="3" branch="False" />
+            <line number="96" hits="3" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="17" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="97" hits="3" branch="False" />
+            <line number="98" hits="3" branch="False" />
+            <line number="101" hits="3" branch="False" />
+            <line number="102" hits="3" branch="False" />
+            <line number="103" hits="3" branch="False" />
+            <line number="104" hits="3" branch="False" />
+            <line number="20" hits="19" branch="False" />
+            <line number="21" hits="19" branch="False" />
+            <line number="22" hits="19" branch="False" />
+            <line number="24" hits="19" branch="False" />
+            <line number="25" hits="19" branch="False" />
+            <line number="26" hits="19" branch="False" />
+            <line number="27" hits="19" branch="False" />
+            <line number="29" hits="19" branch="False" />
+            <line number="30" hits="19" branch="False" />
+            <line number="31" hits="19" branch="False" />
+            <line number="33" hits="19" branch="False" />
+            <line number="34" hits="19" branch="False" />
+            <line number="35" hits="19" branch="False" />
+            <line number="38" hits="19" branch="False" />
+          </lines>
+        </class>
+        <class name="PassphraseGenerator.Components.PassphraseForm/&lt;CopyToClipboard&gt;d__41" filename="Components/PassphraseForm.razor.cs" line-rate="0.44439999999999996" branch-rate="0.375" complexity="8">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="0.44439999999999996" branch-rate="0.375" complexity="8">
+              <lines>
+                <line number="107" hits="1" branch="False" />
+                <line number="108" hits="1" branch="True" condition-coverage="50% (1/2)">
+                  <conditions>
+                    <condition number="34" type="jump" coverage="50%" />
+                  </conditions>
+                </line>
+                <line number="111" hits="1" branch="False" />
+                <line number="112" hits="1" branch="False" />
+                <line number="113" hits="1" branch="True" condition-coverage="50% (1/2)">
+                  <conditions>
+                    <condition number="223" type="jump" coverage="50%" />
+                  </conditions>
+                </line>
+                <line number="114" hits="1" branch="False" />
+                <line number="115" hits="1" branch="False" />
+                <line number="116" hits="1" branch="False" />
+                <line number="118" hits="1" branch="True" condition-coverage="50% (1/2)">
+                  <conditions>
+                    <condition number="265" type="jump" coverage="50%" />
+                  </conditions>
+                </line>
+                <line number="119" hits="1" branch="False" />
+                <line number="120" hits="1" branch="False" />
+                <line number="122" hits="1" branch="False" />
+                <line number="123" hits="0" branch="True" condition-coverage="0% (0/2)">
+                  <conditions>
+                    <condition number="442" type="jump" coverage="0%" />
+                  </conditions>
+                </line>
+                <line number="124" hits="0" branch="False" />
+                <line number="125" hits="0" branch="False" />
+                <line number="126" hits="0" branch="False" />
+                <line number="127" hits="0" branch="False" />
+                <line number="128" hits="0" branch="False" />
+                <line number="129" hits="0" branch="False" />
+                <line number="130" hits="0" branch="False" />
+                <line number="131" hits="0" branch="False" />
+                <line number="133" hits="0" branch="False" />
+                <line number="134" hits="0" branch="False" />
+                <line number="135" hits="0" branch="False" />
+                <line number="136" hits="0" branch="False" />
+                <line number="137" hits="0" branch="False" />
+                <line number="138" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="107" hits="1" branch="False" />
+            <line number="108" hits="1" branch="True" condition-coverage="50% (1/2)">
+              <conditions>
+                <condition number="34" type="jump" coverage="50%" />
+              </conditions>
+            </line>
+            <line number="111" hits="1" branch="False" />
+            <line number="112" hits="1" branch="False" />
+            <line number="113" hits="1" branch="True" condition-coverage="50% (1/2)">
+              <conditions>
+                <condition number="223" type="jump" coverage="50%" />
+              </conditions>
+            </line>
+            <line number="114" hits="1" branch="False" />
+            <line number="115" hits="1" branch="False" />
+            <line number="116" hits="1" branch="False" />
+            <line number="118" hits="1" branch="True" condition-coverage="50% (1/2)">
+              <conditions>
+                <condition number="265" type="jump" coverage="50%" />
+              </conditions>
+            </line>
+            <line number="119" hits="1" branch="False" />
+            <line number="120" hits="1" branch="False" />
+            <line number="122" hits="1" branch="False" />
+            <line number="123" hits="0" branch="True" condition-coverage="0% (0/2)">
+              <conditions>
+                <condition number="442" type="jump" coverage="0%" />
+              </conditions>
+            </line>
+            <line number="124" hits="0" branch="False" />
+            <line number="125" hits="0" branch="False" />
+            <line number="126" hits="0" branch="False" />
+            <line number="127" hits="0" branch="False" />
+            <line number="128" hits="0" branch="False" />
+            <line number="129" hits="0" branch="False" />
+            <line number="130" hits="0" branch="False" />
+            <line number="131" hits="0" branch="False" />
+            <line number="133" hits="0" branch="False" />
+            <line number="134" hits="0" branch="False" />
+            <line number="135" hits="0" branch="False" />
+            <line number="136" hits="0" branch="False" />
+            <line number="137" hits="0" branch="False" />
+            <line number="138" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="PassphraseGenerator.Components.PassphraseForm/&lt;OnInitializedAsync&gt;d__34" filename="Components/PassphraseForm.razor.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="42" hits="19" branch="False" />
+                <line number="43" hits="19" branch="False" />
+                <line number="44" hits="19" branch="False" />
+                <line number="45" hits="19" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="42" hits="19" branch="False" />
+            <line number="43" hits="19" branch="False" />
+            <line number="44" hits="19" branch="False" />
+            <line number="45" hits="19" branch="False" />
+          </lines>
+        </class>
+        <class name="PassphraseGenerator.Components.PassphraseForm/&lt;OnParametersSetAsync&gt;d__35" filename="Components/PassphraseForm.razor.cs" line-rate="0.4285" branch-rate="0.5" complexity="2">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="0.4285" branch-rate="0.5" complexity="2">
+              <lines>
+                <line number="48" hits="19" branch="False" />
+                <line number="49" hits="19" branch="True" condition-coverage="50% (1/2)">
+                  <conditions>
+                    <condition number="44" type="jump" coverage="50%" />
+                  </conditions>
+                </line>
+                <line number="50" hits="0" branch="False" />
+                <line number="51" hits="0" branch="False" />
+                <line number="52" hits="0" branch="False" />
+                <line number="53" hits="0" branch="False" />
+                <line number="54" hits="19" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="48" hits="19" branch="False" />
+            <line number="49" hits="19" branch="True" condition-coverage="50% (1/2)">
+              <conditions>
+                <condition number="44" type="jump" coverage="50%" />
+              </conditions>
+            </line>
+            <line number="50" hits="0" branch="False" />
+            <line number="51" hits="0" branch="False" />
+            <line number="52" hits="0" branch="False" />
+            <line number="53" hits="0" branch="False" />
+            <line number="54" hits="19" branch="False" />
+          </lines>
+        </class>
+        <class name="PassphraseGenerator.Components.PassphraseForm/&lt;RegenerateSentence&gt;d__38" filename="Components/PassphraseForm.razor.cs" line-rate="0.9523" branch-rate="0.5" complexity="2">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="0.9523" branch-rate="0.5" complexity="2">
+              <lines>
+                <line number="68" hits="19" branch="False" />
+                <line number="69" hits="19" branch="False" />
+                <line number="70" hits="19" branch="False" />
+                <line number="71" hits="19" branch="False" />
+                <line number="74" hits="19" branch="False" />
+                <line number="75" hits="19" branch="False" />
+                <line number="76" hits="19" branch="False" />
+                <line number="77" hits="18" branch="False" />
+                <line number="79" hits="18" branch="True" condition-coverage="50% (1/2)">
+                  <conditions>
+                    <condition number="287" type="jump" coverage="50%" />
+                  </conditions>
+                </line>
+                <line number="80" hits="0" branch="False" />
+                <line number="81" hits="18" branch="False" />
+                <line number="82" hits="1" branch="False" />
+                <line number="83" hits="1" branch="False" />
+                <line number="84" hits="1" branch="False" />
+                <line number="85" hits="1" branch="False" />
+                <line number="86" hits="1" branch="False" />
+                <line number="87" hits="1" branch="False" />
+                <line number="89" hits="19" branch="False" />
+                <line number="90" hits="19" branch="False" />
+                <line number="91" hits="19" branch="False" />
+                <line number="92" hits="19" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="68" hits="19" branch="False" />
+            <line number="69" hits="19" branch="False" />
+            <line number="70" hits="19" branch="False" />
+            <line number="71" hits="19" branch="False" />
+            <line number="74" hits="19" branch="False" />
+            <line number="75" hits="19" branch="False" />
+            <line number="76" hits="19" branch="False" />
+            <line number="77" hits="18" branch="False" />
+            <line number="79" hits="18" branch="True" condition-coverage="50% (1/2)">
+              <conditions>
+                <condition number="287" type="jump" coverage="50%" />
+              </conditions>
+            </line>
+            <line number="80" hits="0" branch="False" />
+            <line number="81" hits="18" branch="False" />
+            <line number="82" hits="1" branch="False" />
+            <line number="83" hits="1" branch="False" />
+            <line number="84" hits="1" branch="False" />
+            <line number="85" hits="1" branch="False" />
+            <line number="86" hits="1" branch="False" />
+            <line number="87" hits="1" branch="False" />
+            <line number="89" hits="19" branch="False" />
+            <line number="90" hits="19" branch="False" />
+            <line number="91" hits="19" branch="False" />
+            <line number="92" hits="19" branch="False" />
+          </lines>
+        </class>
+        <class name="PassphraseGenerator.Components.PassphraseForm" filename="Components/PassphraseForm.razor" line-rate="0.8571" branch-rate="0.9" complexity="21">
+          <methods>
+            <method name="BuildRenderTree" signature="(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder)" line-rate="0.9" branch-rate="0.9" complexity="20">
+              <lines>
+                <line number="1" hits="31" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="15" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="2" hits="1" branch="False" />
+                <line number="5" hits="1" branch="False" />
+                <line number="8" hits="1" branch="False" />
+                <line number="26" hits="215" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="716" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="27" hits="61" branch="False" />
+                <line number="28" hits="61" branch="False" />
+                <line number="29" hits="61" branch="False" />
+                <line number="49" hits="31" branch="False" />
+                <line number="108" hits="31" branch="True" condition-coverage="50% (1/2)">
+                  <conditions>
+                    <condition number="2675" type="jump" coverage="50%" />
+                  </conditions>
+                </line>
+                <line number="109" hits="0" branch="False" />
+                <line number="114" hits="0" branch="False" />
+                <line number="116" hits="31" branch="False" />
+                <line number="131" hits="31" branch="True" condition-coverage="75% (3/4)">
+                  <conditions>
+                    <condition number="3228" type="jump" coverage="50%" />
+                    <condition number="3280" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="141" hits="31" branch="True" condition-coverage="100% (8/8)">
+                  <conditions>
+                    <condition number="3339" type="jump" coverage="100%" />
+                    <condition number="3754" type="jump" coverage="100%" />
+                    <condition number="3864" type="jump" coverage="100%" />
+                    <condition number="3901" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="163" hits="31" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="3931" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="164" hits="1" branch="False" />
+                <line number="167" hits="1" branch="False" />
+                <line number="169" hits="30" branch="False" />
+                <line number="171" hits="30" branch="False" />
+              </lines>
+            </method>
+            <method name="&lt;BuildRenderTree&gt;b__42_0" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="6" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="1" hits="31" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="15" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="2" hits="1" branch="False" />
+            <line number="5" hits="1" branch="False" />
+            <line number="8" hits="1" branch="False" />
+            <line number="26" hits="215" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="716" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="27" hits="61" branch="False" />
+            <line number="28" hits="61" branch="False" />
+            <line number="29" hits="61" branch="False" />
+            <line number="49" hits="31" branch="False" />
+            <line number="108" hits="31" branch="True" condition-coverage="50% (1/2)">
+              <conditions>
+                <condition number="2675" type="jump" coverage="50%" />
+              </conditions>
+            </line>
+            <line number="109" hits="0" branch="False" />
+            <line number="114" hits="0" branch="False" />
+            <line number="116" hits="31" branch="False" />
+            <line number="131" hits="31" branch="True" condition-coverage="75% (3/4)">
+              <conditions>
+                <condition number="3228" type="jump" coverage="50%" />
+                <condition number="3280" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="141" hits="31" branch="True" condition-coverage="100% (8/8)">
+              <conditions>
+                <condition number="3339" type="jump" coverage="100%" />
+                <condition number="3754" type="jump" coverage="100%" />
+                <condition number="3864" type="jump" coverage="100%" />
+                <condition number="3901" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="163" hits="31" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="3931" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="164" hits="1" branch="False" />
+            <line number="167" hits="1" branch="False" />
+            <line number="169" hits="30" branch="False" />
+            <line number="171" hits="30" branch="False" />
+            <line number="6" hits="0" branch="False" />
+          </lines>
+        </class>
+      </classes>
+    </package>
+  </packages>
+</coverage>

@@ -1,0 +1,177 @@
+@if (_error is not null)
+{
+    <div class="alert alert-warning alert-dismissible" role="alert" aria-live="polite">
+        <i class="bi bi-exclamation-triangle-fill me-2" aria-hidden="true"></i>
+        @_error
+        <button type="button" class="btn-close" @onclick="() => _error = null" aria-label="Sluiten"></button>
+    </div>
+}
+
+<div class="row justify-content-center">
+    <div class="col-12 col-md-10 col-lg-8">
+        <div class="card mb-4 shadow-sm">
+            <div class="card-header fw-semibold">
+                <i class="bi bi-sliders me-2" aria-hidden="true"></i>Opties
+            </div>
+            <div class="card-body">
+                <div class="row mb-3 align-items-center">
+                    <label for="languageSelect" class="col-sm-4 col-form-label fw-medium">
+                        Taal
+                    </label>
+                    <div class="col-sm-8">
+                        <select id="languageSelect"
+                                class="form-select"
+                                @bind="_selectedLanguage"
+                                aria-label="Selecteer taal">
+                            @foreach (var lang in _languages)
+                            {
+                                <option value="@lang.Key">@lang.Value</option>
+                            }
+                        </select>
+                    </div>
+                </div>
+
+                <div class="row mb-3 align-items-center">
+                    <label class="col-sm-4 col-form-label fw-medium" id="wordCountLabel">
+                        Aantal woorden
+                    </label>
+                    <div class="col-sm-8">
+                        <div class="d-flex align-items-center gap-2" role="group" aria-labelledby="wordCountLabel">
+                            <button class="btn btn-outline-secondary stepper-btn"
+                                    @onclick="DecrementWordCount"
+                                    disabled="@(_wordCount <= MinWords)"
+                                    aria-label="Minder woorden">
+                                <i class="bi bi-chevron-left" aria-hidden="true"></i>
+                            </button>
+                            <span class="word-count-display fw-bold fs-5 px-3"
+                                  aria-live="polite"
+                                  aria-atomic="true"
+                                  role="status">@_wordCount</span>
+                            <button class="btn btn-outline-secondary stepper-btn"
+                                    @onclick="IncrementWordCount"
+                                    disabled="@(_wordCount >= MaxWords)"
+                                    aria-label="Meer woorden">
+                                <i class="bi bi-chevron-right" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <fieldset>
+                    <legend class="col-form-label fw-medium mb-2">Transformaties</legend>
+                    <div class="row row-cols-1 row-cols-sm-2 g-2">
+                        <div class="col">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="chkSpace" @bind="_useSpace" />
+                                <label class="form-check-label" for="chkSpace">
+                                    Spatie gebruiken
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="chkCapital" @bind="_useCapital" />
+                                <label class="form-check-label" for="chkCapital">
+                                    Hoofdletter gebruiken
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="chkNumbers" @bind="_useNumbers" />
+                                <label class="form-check-label" for="chkNumbers">
+                                    Getallen gebruiken
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="chkSpecial" @bind="_useSpecialCharacters" />
+                                <label class="form-check-label" for="chkSpecial">
+                                    Leestekens gebruiken
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+        </div>
+
+        <div class="card mb-4 shadow-sm">
+            <div class="card-header fw-semibold">
+                <i class="bi bi-chat-text me-2" aria-hidden="true"></i>Gegenereerde woorden
+            </div>
+            <div class="card-body">
+                @if (_isLoading)
+                {
+                    <div class="d-flex align-items-center gap-2 text-muted" role="status" aria-live="polite">
+                        <div class="spinner-border spinner-border-sm" aria-hidden="true"></div>
+                        <span>Woordenlijst laden&hellip;</span>
+                    </div>
+                }
+                else
+                {
+                    <div class="input-group">
+                        <input type="text"
+                               class="form-control font-monospace"
+                               readonly
+                               value="@_sentenceDisplay"
+                               aria-label="Gegenereerde zinwoorden"
+                               aria-readonly="true" />
+                        <button class="btn btn-outline-secondary"
+                                @onclick="RegenerateSentence"
+                                title="Opnieuw genereren"
+                                aria-label="Woorden opnieuw genereren">
+                            <i class="bi bi-arrow-clockwise" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                }
+            </div>
+        </div>
+
+        <div class="d-grid mb-4">
+            <button class="btn btn-primary btn-lg"
+                    @onclick="GeneratePassword"
+                    disabled="@(_isLoading || _generatedWords.Count == 0)"
+                    aria-label="@(_selectedLanguage == "nl" ? "Genereer wachtwoord" : "Generate passphrase")">
+                <i class="bi bi-key-fill me-2" aria-hidden="true"></i>
+                @(_selectedLanguage == "nl" ? "Genereer wachtwoord" : "Generate passphrase")
+            </button>
+        </div>
+
+        <div class="card shadow-sm">
+            <div class="card-header fw-semibold">
+                <i class="bi bi-lock-fill me-2" aria-hidden="true"></i>Wachtwoord
+            </div>
+            <div class="card-body">
+                <div class="input-group">
+                    <input type="text"
+                           class="form-control font-monospace"
+                           readonly
+                           value="@_generatedPassword"
+                           placeholder="Klik op 'Genereer wachtwoord'…"
+                           aria-label="Gegenereerd wachtwoord"
+                           aria-readonly="true" />
+                    <button class="btn @(_copied ? "btn-success" : "btn-outline-secondary")"
+                            @onclick="CopyToClipboard"
+                            disabled="@(string.IsNullOrEmpty(_generatedPassword))"
+                            title="@(_copied ? "Gekopieerd!" : "Kopieer naar klembord")"
+                            aria-label="@(_copied ? "Gekopieerd!" : "Kopieer wachtwoord naar klembord")">
+                        @if (_copied)
+                        {
+                            <i class="bi bi-check-lg" aria-hidden="true"></i>
+                            <span class="ms-1 d-none d-sm-inline">Gekopieerd!</span>
+                        }
+                        else
+                        {
+                            <i class="bi bi-clipboard" aria-hidden="true"></i>
+                        }
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

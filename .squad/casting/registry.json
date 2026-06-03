@@ -1,0 +1,44 @@
+{
+  "agents": {
+    "dobby": {
+      "created_at": "2026-06-03T10:22:59.4276625Z",
+      "legacy_named": false,
+      "universe": "Harry Potter",
+      "role": "DevOps",
+      "persistent_name": "Dobby",
+      "status": "active"
+    },
+    "moody": {
+      "created_at": "2026-06-03T10:22:59.4276061Z",
+      "legacy_named": false,
+      "universe": "Harry Potter",
+      "role": "Tester",
+      "persistent_name": "Moody",
+      "status": "active"
+    },
+    "luna": {
+      "created_at": "2026-06-03T10:22:59.4274669Z",
+      "legacy_named": false,
+      "universe": "Harry Potter",
+      "role": "Frontend Dev",
+      "persistent_name": "Luna",
+      "status": "active"
+    },
+    "hermione": {
+      "created_at": "2026-06-03T10:22:59.4275466Z",
+      "legacy_named": false,
+      "universe": "Harry Potter",
+      "role": "Backend Dev",
+      "persistent_name": "Hermione",
+      "status": "active"
+    },
+    "dumbledore": {
+      "created_at": "2026-06-03T10:22:59.4270918Z",
+      "legacy_named": false,
+      "universe": "Harry Potter",
+      "role": "Lead",
+      "persistent_name": "Dumbledore",
+      "status": "active"
+    }
+  }
+}

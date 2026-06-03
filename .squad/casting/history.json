@@ -1,0 +1,18 @@
+{
+  "assignments": [
+    {
+      "created_at": "2026-06-03T10:22:59.5949890Z",
+      "team": [
+        "dumbledore",
+        "luna",
+        "hermione",
+        "moody",
+        "dobby",
+        "scribe",
+        "ralph"
+      ],
+      "assignment_id": "passphrase-hp-20260603-102259",
+      "universe": "Harry Potter"
+    }
+  ]
+}
