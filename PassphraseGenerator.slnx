@@ -2,6 +2,7 @@
   <Folder Name="/src/">
     <Project Path="src/PassphraseGenerator.Core/PassphraseGenerator.Core.csproj" />
     <Project Path="src/PassphraseGenerator/PassphraseGenerator.csproj" />
+    <Project Path="src/PassphraseGenerator.Tests/PassphraseGenerator.Tests.csproj" />
   </Folder>
   <Folder Name="/tests/">
     <Project Path="tests/PassphraseGenerator.Tests/PassphraseGenerator.Tests.csproj" />

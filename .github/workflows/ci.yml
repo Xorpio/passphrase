@@ -20,13 +20,13 @@ jobs:
           dotnet-version: '10.x'
 
       - name: Restore dependencies
-        run: dotnet restore
+        run: dotnet restore PassphraseGenerator.slnx
 
       - name: Build Release
-        run: dotnet build --configuration Release --no-restore
+        run: dotnet build PassphraseGenerator.slnx --configuration Release --no-restore
 
       - name: Run unit tests
-        run: dotnet test --configuration Release --no-build --logger "trx" --collect:"XPlat Code Coverage"
+        run: dotnet test PassphraseGenerator.slnx --configuration Release --no-build --logger "trx" --collect:"XPlat Code Coverage"
 
       - name: Upload test results
         if: always()
