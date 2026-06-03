@@ -34,6 +34,13 @@
 
 ## Learnings
 
+### 2026-06-03T20:02:20.701+02:00 — Vendor Bootstrap assets (no CDN)
+
+- Vendored `bootstrap.min.css` and `bootstrap-icons` (CSS + fonts) under `src/PassphraseGenerator/wwwroot/lib/**` and updated `wwwroot/index.html` to reference them.
+- Updated the deploy workflow smoke-check to assert vendored assets exist in `publish/wwwroot/lib/**` (prevents reintroducing CSS/icon 404s on Pages).
+- Fixed `.gitignore` to use `/dist/` (root-only) so vendored Bootstrap’s `lib/bootstrap/dist/...` isn’t accidentally ignored.
+
+
 ### 2026-06-03T19:32:02.168+02:00 — GitHub Pages CSS 404 fix
 
 - GitHub Pages subpath hosting (`/passphrase/`) requires rewriting `<base href>` in the published `index.html` (we do this in `deploy.yml` via `sed`).

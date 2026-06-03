@@ -53,12 +53,16 @@ jobs:
           # Ensure subpath hosting is configured correctly
           grep -q '<base href="/passphrase/" />' publish/wwwroot/index.html
 
-          # Prevent deploying known-broken references (GH Pages would serve 404s)
-          if grep -q 'lib/bootstrap' publish/wwwroot/index.html; then
-            echo "index.html references lib/bootstrap but bootstrap is not vendored in wwwroot" >&2
-            exit 1
-          fi
+          # Ensure local static libraries exist (avoid CDN + avoid 404s)
+          grep -q 'lib/bootstrap/dist/css/bootstrap.min.css' publish/wwwroot/index.html
+          test -f publish/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css
 
+          grep -q 'lib/bootstrap-icons/font/bootstrap-icons.min.css' publish/wwwroot/index.html
+          test -f publish/wwwroot/lib/bootstrap-icons/font/bootstrap-icons.min.css
+          test -f publish/wwwroot/lib/bootstrap-icons/font/fonts/bootstrap-icons.woff2
+          test -f publish/wwwroot/lib/bootstrap-icons/font/fonts/bootstrap-icons.woff
+
+          # CSS isolation is not used in this project; prevent a broken reference
           if grep -q 'PassphraseGenerator.styles.css' publish/wwwroot/index.html; then
             echo "index.html references PassphraseGenerator.styles.css but CSS isolation bundle is not present" >&2
             exit 1

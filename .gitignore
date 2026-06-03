@@ -26,7 +26,8 @@ TestResults/
 *.coveragexml
 
 # Build output
-dist/
+/dist/
+publish_local/
 *.nupkg
 *.snupkg
 
