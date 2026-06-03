@@ -46,6 +46,28 @@ jobs:
       - name: Fix base href for GitHub Pages subpath
         run: sed -i 's|<base href="/" />|<base href="/passphrase/" />|g' publish/wwwroot/index.html
 
+      - name: Validate published static assets
+        run: |
+          set -euo pipefail
+
+          # Ensure subpath hosting is configured correctly
+          grep -q '<base href="/passphrase/" />' publish/wwwroot/index.html
+
+          # Prevent deploying known-broken references (GH Pages would serve 404s)
+          if grep -q 'lib/bootstrap' publish/wwwroot/index.html; then
+            echo "index.html references lib/bootstrap but bootstrap is not vendored in wwwroot" >&2
+            exit 1
+          fi
+
+          if grep -q 'PassphraseGenerator.styles.css' publish/wwwroot/index.html; then
+            echo "index.html references PassphraseGenerator.styles.css but CSS isolation bundle is not present" >&2
+            exit 1
+          fi
+
+          # Minimal expected assets
+          test -f publish/wwwroot/css/app.css
+          ls publish/wwwroot/_framework/blazor.webassembly*.js >/dev/null
+
       - name: Add .nojekyll marker
         run: touch publish/wwwroot/.nojekyll
 

@@ -34,6 +34,12 @@
 
 ## Learnings
 
+### 2026-06-03T19:32:02.168+02:00 — GitHub Pages CSS 404 fix
+
+- GitHub Pages subpath hosting (`/passphrase/`) requires rewriting `<base href>` in the published `index.html` (we do this in `deploy.yml` via `sed`).
+- `wwwroot/index.html` must not reference static assets that aren’t actually produced by `dotnet publish` (e.g., `lib/bootstrap/...` or `{AssemblyName}.styles.css` when CSS isolation isn’t used), otherwise Pages will serve 404s.
+- Adding a small deploy-time “asset smoke check” in the workflow prevents silently shipping broken static references.
+
 ### 2026-06-03 — GitHub Actions CI/CD Pipeline Setup
 
 **CI/CD Workflows Created:**
