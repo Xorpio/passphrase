@@ -43,6 +43,9 @@ jobs:
           dotnet publish src/PassphraseGenerator -c Release -o publish \
             -p:BlazorPathBase=/passphrase/
 
+      - name: Fix base href for GitHub Pages subpath
+        run: sed -i 's|<base href="/" />|<base href="/passphrase/" />|g' publish/wwwroot/index.html
+
       - name: Add .nojekyll marker
         run: touch publish/wwwroot/.nojekyll
 
